@@ -8,8 +8,9 @@ def multiply(a, b):
 	return a * b
 
 def divide(a, b):
-	# Intentionally ignoring divide-by-zero check for now
-	return a / b
+    if b == 0:
+        raise ZeroDivisionError("Cannot divide by zero.")
+    return a / b
 
 if __name__ == "__main__":
 	# Simple command-line interface
